@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 const breadTypes = ["sourdough", "whole wheat",
     "rye", "french roll", "dutch crunch", "croissant", "bagel", "garlic bread", "brioche", "ciabatta", "pretzel roll", "pita pocket", "potato bread"];
 const meatTypes = ["pastrami", "mortadella", "bologna", "turkey", "ham", "proscuitto", "roast beef", "meatball", "pulled pork", "chicken breast", "chorizo", "salami", "pepperoni"];
+const cheeseTypes = ["swiss", "cheddar", "pepperjack", "american", "kraft singles", "cheeze wiz", "goat cheese", "provolone", "burrata", "feta", "havarti", "brie"];
 
 function randomItemFromArray(stuffToChooseFrom) {
     return stuffToChooseFrom[(Math.floor(Math.random() * stuffToChooseFrom.length))];
@@ -21,4 +22,8 @@ function outputToHtml() {
 
     const meatTag = document.getElementById('meatOutput');
     meatTag.innerHTML = randomItemFromArray(meatTypes);
+
+    const cheeseTag = document.getElementById('cheeseOutput');
+    cheeseTag.innerHTML = randomItemFromArray(cheeseTypes);
 }
+
