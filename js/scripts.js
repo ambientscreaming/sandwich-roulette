@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 const breadTypes = ["sourdough", "whole wheat",
     "rye", "french roll", "dutch crunch", "croissant", "bagel", "garlic bread", "brioche", "ciabatta", "pretzel roll", "pita pocket", "potato bread"];
-const meatTypes = ["pastrami", "mortadella", "bologna", "turkey", "ham", "proscuitto", "roast beef", "meatball", "pulled pork", "chicken breast", "chorizo", "salami", "pepperoni"];
-const cheeseTypes = ["swiss", "cheddar", "pepperjack", "kraft singles", "cheeze wiz", "goat cheese", "provolone", "burrata", "feta", "havarti", "brie"];
-const condimentTypes = ["bbq sauce", "garlic aioli", "yellow mustard", "mayo and mustard", "pesto", "cranberry sauce", "dijon", "horseradish sauce", "hummus", "sriracha", "butter", "honey"];
-const veggieTypes = ["lettuce & tomato", "carmelized onions", "jalapenos", "roasted red peppers", "heirloom tomatoes", "pepperoncinis", "sprouts", "pickled onions", "avocado", "cucumber", "spinach", "sauteed mushrooms"];
+const meatTypes = ["pastrami", "mortadella", "bologna", "turkey", "ham", "proscuitto", "roast beef", "tuna", "meatball", "pulled pork", "chicken breast", "chorizo", "salami", "pepperoni", "steak"];
+const cheeseTypes = ["swiss", "cheddar", "pepperjack", "kraft singles", "cheeze wiz", "goat cheese", "provolone", "burrata", "feta", "havarti", "brie", "mozarella"];
+const condimentTypes = ["bbq sauce", "garlic aioli", "yellow mustard", "mayo and mustard", "pesto", "dijon", "hummus"];
+const veggieTypes = ["lettuce & tomato", "carmelized onions", "jalapenos", "roasted red peppers", "heirloom tomatoes", "pepperoncinis", "sprouts", "pickled onions", "cucumber", "spinach", "pickles"];
 const tempTypes = ["hot", "cold"];
+const bonusTypes = ["bacon", "fried egg", "grilled pineapple", "grilled zucchini", "hot honey", "avocado", "sauteed mushrooms", "sriracha", "horseradish sauce", "cranberry sauce"];
 
 function randomItemFromArray(stuffToChooseFrom) {
     return stuffToChooseFrom[(Math.floor(Math.random() * stuffToChooseFrom.length))];
@@ -37,5 +38,8 @@ function outputToHtml() {
 
     const tempTag = document.getElementById('tempOutput');
     tempTag.innerHTML = randomItemFromArray(tempTypes);
+
+    const bonusTag = document.getElementById('bonusOutput');
+    bonusTag.innerHTML = randomItemFromArray(bonusTypes);
 }
 
